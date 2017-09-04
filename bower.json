@@ -1,0 +1,23 @@
+{
+  "name": "training-from-hell",
+  "description": "training-from-hell",
+  "main": "index.js",
+  "authors": [
+    "Cris Lima Froes <cris.lima.froes@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/crislmfroes/training-from-hell",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "3.3.7",
+    "handlebars": "^4.0.10"
+  }
+}
