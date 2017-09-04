@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banco de Séries</title>
+  <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div id="mensagem"></div>
+
+    <nav class="navbar navbar-default" role="navigation">
+      <a href="index" class="btn btn-primary">Cadastrar</a>
+      <a href="series" class="btn">Suas Séries</a>
+    </nav>
+
+    <form id="formSerie" action="" method="POST" role="form">
+      <h2>Cadastrar uma Série</h2>
+      <div class="form-group">
+        <label for="nomeDaSerie">Nome da Série</label>
+        <input type="text" class="form-control" id="nomeDaSerie" placeholder="Nome Da Série" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+    <form id="formTemporada" action="" method="POST" role="form">
+      <h2>Cadastrar temporada a uma série</h2>
+      <select name="selectSeries" id="selectSeries" class="form-control" required="required">
+        <option value="">Selecione uma série cadastrada</option>
+      </select>
+      <div class="form-group">
+        <label for="nTemporada">N Episódios da Temporada <span>1</span></label>
+        <input type="number" class="form-control" id="nTemporada" placeholder="N Episódios da Temporada" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Adicionar Temporada à Série</button>
+    </form>
+  </div>
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/vendor/handlebars/handlebars.min.js"></script>
+  <script id="templateSucesso" type="text/x-handlebars-template">
+    <div class="alert alert-success" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+      <strong>Sucesso!</strong> A série {{nome}} foi cadastrada!
+    </div>
+  </script>
+  <script src="js/serie.js"></script>
+  <script src="js/persistencia.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

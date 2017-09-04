@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Banco de Séries</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="mensagem"></div>
+
+        <nav class="navbar navbar-default" role="navigation">
+            <a href="index" class="btn">Cadastrar</a>
+            <a href="series" class="btn btn-primary">Suas Séries</a>
+        </nav>
+
+    </div>
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script id="serieTemplate" type="text/x-handlebars-template">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{nome}}</h3>
+            </div>
+            <div class="panel-body">
+                {{#list temporadas}}
+                    {{temporada}}
+                {{/list}}
+            </div>
+        </div>
+    </script>
+    <script id="temporadaTemplate" type="text/x-handlebars-template">
+        {{#list episodios}}
+            {{episodio}}
+        {{/list}}
+    </script>
+    <script id="episodioTemplate" type="text/x-handlebars-template">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="{{assistido}}">
+                Episódio {{numero}}
+            </label>
+        </div>
+    </script>
+</body>
+</html>
